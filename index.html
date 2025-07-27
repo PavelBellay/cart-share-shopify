@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopify Cart Share</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <div class="icon">🛒</div>
+      <h1>Share Your Shopify Cart</h1>
+      <p class="subtext">Paste your product IDs and quantities. We'll create a shareable link for you.</p>
+
+      <form id="cart-form">
+        <label for="cart-input">Cart Items (Format: <code>id:qty</code>):</label>
+        <input type="text" id="cart-input" placeholder="e.g. 12345:2,67890:1" required />
+        <button type="submit">Generate Link</button>
+      </form>
+
+      <div id="result" class="hidden">
+        <p class="result-label">Shareable Link:</p>
+        <div class="link-box">
+          <input type="text" id="share-link" readonly />
+          <button id="copy-btn">📋 Copy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
